@@ -1,5 +1,5 @@
 {
-    "name": "dagmike/BinPacking",
+    "name": "MicahKV/BinPacking",
     "description": "2D bin packing PHP implementation",
     "type": "library",
     "authors": [
