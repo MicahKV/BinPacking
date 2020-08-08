@@ -31,6 +31,13 @@ class Rectangle
      * @var int
      */
     protected $height;
+    
+	/**
+     * Identifier for the rectangle
+     *
+     * @var int
+     */
+    protected $id;
 
     /**
      * Construct the rectangle
@@ -38,8 +45,9 @@ class Rectangle
      * @param integer $width Outer width of the rectangle
      * @param integer $height Outer height of the rectangle
      */
-    public function __construct(int $width, int $height)
+    public function __construct(int $width, int $height, string $id = null)
     {
+        $this->id = $id;
         $this->width = $width;
         $this->height = $height;
         $this->xPos = 0;
