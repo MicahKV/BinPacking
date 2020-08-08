@@ -19,7 +19,7 @@ class RectangleFactory
                 $rectangle->getRightBorder()
             );
         } else {
-            $rect = new Rectangle($rectangle->getWidth(), $rectangle->getHeight());
+            $rect = new Rectangle($rectangle->getWidth(), $rectangle->getHeight(), $rectangle->getId());
         }
 
         $rect->setX($rectangle->getX());
