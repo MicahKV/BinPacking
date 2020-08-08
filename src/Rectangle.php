@@ -55,6 +55,16 @@ class Rectangle
     }
 
     /**
+     * Get the ID of the rectangle
+     *
+     * @return string
+     */
+    public function getId() : string
+    {
+        return $this->id;
+    }
+
+    /**
      * Get the width of the rectangle
      *
      * @return integer
