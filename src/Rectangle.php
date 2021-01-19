@@ -73,7 +73,7 @@ class Rectangle
     }
 
     /**
-     * Get the ID of the rectangle
+     * Get the rotated flag
      *
      * @return boolean
      */
