@@ -77,9 +77,9 @@ class Rectangle
      *
      * @return boolean
      */
-    public function getId() : ?bool
+    public function getRotated() : ?bool
     {
-        return $this->id;
+        return $this->rotated;
     }
 
     /**
