@@ -32,12 +32,19 @@ class Rectangle
      */
     protected $height;
     
-	/**
+     /**
      * Identifier for the rectangle
      *
-     * @var int
+     * @var string
      */
     protected $id;
+
+    /**
+     * Flag to indicate that a rectangle has been rotated
+     *
+     * @var boolean
+     */
+    protected $rotated;
 
     /**
      * Construct the rectangle
@@ -52,6 +59,7 @@ class Rectangle
         $this->height = $height;
         $this->xPos = 0;
         $this->yPos = 0;
+	$this->rotated = false;
     }
 
     /**
@@ -60,6 +68,16 @@ class Rectangle
      * @return string
      */
     public function getId() : ?string
+    {
+        return $this->id;
+    }
+
+    /**
+     * Get the ID of the rectangle
+     *
+     * @return boolean
+     */
+    public function getId() : ?bool
     {
         return $this->id;
     }
@@ -173,5 +191,6 @@ class Rectangle
 
         $this->height = $newHeight;
         $this->width = $newWidth;
+	$this->rotated = !$this->rotated;
     }
 }
