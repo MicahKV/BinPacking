@@ -101,6 +101,26 @@ class Rectangle
         return $this->rotated;
     }
 
+    public function setImageSource($imageSource)
+    {
+        $this->imageSource = $imageSource;
+    }
+
+    public function getImageSource()
+    {
+        return $this->imageSource;
+    }
+
+    public function setImageLocal($imageLocal)
+    {
+        $this->imageLocal = $imageLocal;
+    }
+
+    public function getImageLocal()
+    {
+        return $this->imageLocal;
+    }
+
     /**
      * Get the width of the rectangle
      *
