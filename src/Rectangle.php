@@ -32,7 +32,7 @@ class Rectangle
      */
     protected $height;
     
-     /**
+    /**
      * Identifier for the rectangle
      *
      * @var string
@@ -47,19 +47,38 @@ class Rectangle
     protected $rotated;
 
     /**
+     * Identifier for the image's supplied source (eg. origin URL)
+     *
+     * @var string
+     */
+    protected $imageSource;
+
+    /**
+     * Identifier for the image's location on "local" storage
+     *
+     * @var string
+     */
+    protected $imageLocal;
+
+    /**
      * Construct the rectangle
      *
      * @param integer $width Outer width of the rectangle
      * @param integer $height Outer height of the rectangle
+     * @param string $id Identifier for the rectangle
+     * @param string $imageSource Image source URL or filename
+     * @param string $imageLocal Local URL or filename
      */
-    public function __construct(int $width, int $height, string $id = null)
+    public function __construct(int $width, int $height, string $id = null, string $imageSource = null, string $imageLocal = null)
     {
         $this->id = $id;
         $this->width = $width;
         $this->height = $height;
         $this->xPos = 0;
         $this->yPos = 0;
-	$this->rotated = false;
+        $this->rotated = false;
+        $this->imageSource = $imageSource;
+        $this->imageLocal = $imageLocal;
     }
 
     /**
@@ -191,6 +210,6 @@ class Rectangle
 
         $this->height = $newHeight;
         $this->width = $newWidth;
-	$this->rotated = !$this->rotated;
+        $this->rotated = !$this->rotated;
     }
 }
